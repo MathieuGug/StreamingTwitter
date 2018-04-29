@@ -2,6 +2,7 @@ import io.hgraphdb.HBaseGraph;
 import io.hgraphdb.HBaseGraphConfiguration;
 import org.apache.flink.api.java.utils.ParameterTool;
 import org.apache.tinkerpop.gremlin.structure.Vertex;
+
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
@@ -9,7 +10,7 @@ public class TwitterStreaming {
     public static void main(String args []) throws Exception {
         // CHECKING INPUT PARAMETERS
         final ParameterTool params = ParameterTool.fromArgs(args);
-        //System.out.println("Usage: TwitterExample [--output <path>] " +
+        //System.out.println("Usage: TwitterStreaming +
         //        "[--twitter-source.consumerKey <key> --twitter-source.consumerSecret <secret> --twitter-source.token <token> --twitter-source.tokenSecret <tokenSecret>]");
 
         String CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET;
@@ -32,13 +33,13 @@ public class TwitterStreaming {
 
     private static void streamFeed(twitter4j.conf.Configuration cb, Twitter twitter) {
         org.apache.commons.configuration.Configuration cfg = new HBaseGraphConfiguration()
-                .setInstanceType(HBaseGraphConfiguration.InstanceType.DISTRIBUTED)
-                .setGraphNamespace("tweets_graph2")
-                .setCreateTables(true)
-                .set("hbase.zookeeper.quorum", "127.0.0.1")
-                .set("zookeeper.znode.parent", "/hbase")
-                .setUseSchema(true);
-        HBaseGraph graph = HBaseGraph.open(cfg);
+                    .setInstanceType(HBaseGraphConfiguration.InstanceType.DISTRIBUTED)
+                    .setGraphNamespace("tweets_graph2")
+                    .setCreateTables(true)
+                    .set("hbase.zookeeper.quorum", "127.0.0.1")
+                    .set("zookeeper.znode.parent", "/hbase")
+                    .setUseSchema(true);
+            HBaseGraph graph = HBaseGraph.open(cfg);
 
         TwitterToGraph tw = new TwitterToGraph(twitter, graph);
 
@@ -90,7 +91,7 @@ public class TwitterStreaming {
 
         TwitterStream twitterStream = new TwitterStreamFactory(cb).getInstance();
         FilterQuery tweetFilterQuery = new FilterQuery();
-        tweetFilterQuery.track(new String[]{"bieber"});
+        tweetFilterQuery.track(new String[]{"#ArtificialIntelligence"});
 
         twitterStream.addListener(listener);
         twitterStream.filter(tweetFilterQuery);
