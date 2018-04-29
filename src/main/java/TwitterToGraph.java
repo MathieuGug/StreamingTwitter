@@ -11,8 +11,6 @@ import java.util.Date;
 
 public class TwitterToGraph
 {
-    // Twitter properties to save
-    static final String outputPath = "tinkertweet.graphml";
     private Graph g;
     private Twitter twitter;
 
@@ -31,17 +29,27 @@ public class TwitterToGraph
 
         GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("id", status.getId());
         if (vt.hasNext()) {
-            System.out.println("Tweet already exists.");
+            g.traversal().V(status.getId()).property("favourites_count", status.getFavoriteCount(),
+                    "retweets_count", status.getRetweetCount());
+
+            System.out.println("Tweet data updated.");
             return vt.next();
         }
         else {
+            User user = status.getUser();
+
             Vertex tweet = g.addVertex(T.id, status.getId(), T.label, "tweet",
                     "id", status.getId(),
                     "created_str", status.getCreatedAt().toString(),
                     "created_at", status.getCreatedAt().getTime()/1000,
                     "text", status.getText(),
                     "favourites_count", status.getFavoriteCount(),
-                    "retweeted", status.isRetweeted());
+                    "retweets_count", status.getRetweetCount(),
+                    "retweeted", status.isRetweeted(),
+                    "followers_at_time", status.getUser().getFollowersCount(),
+                    "friends_at_time", user.getFriendsCount(),
+                    "statuses_at_time", user.getStatusesCount(),
+                    "listed_at_time", user.getListedCount());
             System.out.println("Tweet created!");
             return tweet;
         }
@@ -50,7 +58,12 @@ public class TwitterToGraph
     public Vertex getOrCreateUser(User u) {
         GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("user_key", u.getName());
         if (vt.hasNext()) {
-            System.out.println("User already exists.");
+            g.traversal().V(u.getId()).property("favourites_count", u.getFavouritesCount(),
+                    "followers_count", u.getFollowersCount(),
+                    "friends_count", u.getFriendsCount(),
+                    "statuses_count", u.getStatusesCount(),
+                    "listed_count", u.getListedCount());
+            System.out.println("User updated.");
             return vt.next();
         }
         else {

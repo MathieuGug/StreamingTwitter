@@ -47,8 +47,12 @@ public class CreateGraphNodes {
                 "text", ValueType.STRING,
                 "favourites_count", ValueType.INT,
                 "retweets_count", ValueType.INT,
-                "mentions_count", ValueType.INT,
-                "retweeted", ValueType.BOOLEAN);
+                "replies_count", ValueType.INT,
+                "retweeted", ValueType.BOOLEAN,
+                "followers_at_time", ValueType.INT,
+                "friends_at_time", ValueType.INT,
+                "statuses_at_time", ValueType.INT,
+                "listed_at_time", ValueType.INT);
         System.out.println("Tweet OK!");
 
 
