@@ -5,6 +5,7 @@
     <output-test url="file://$MODULE_DIR$/target/test-classes" />
     <content url="file://$MODULE_DIR$">
       <sourceFolder url="file://$MODULE_DIR$/src/main/java" isTestSource="false" />
+      <sourceFolder url="file://$MODULE_DIR$/target/generated-sources/annotations" isTestSource="false" generated="true" />
       <excludeFolder url="file://$MODULE_DIR$/target" />
     </content>
     <orderEntry type="inheritedJdk" />
@@ -98,6 +99,20 @@
     <orderEntry type="library" name="Maven: net.objecthunter:exp4j:0.4.8" level="project" />
     <orderEntry type="library" name="Maven: org.slf4j:jcl-over-slf4j:1.7.21" level="project" />
     <orderEntry type="library" name="Maven: org.apache.tinkerpop:tinkergraph-gremlin:3.3.2" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.tinkerpop:gremlin-groovy:3.3.1" level="project" />
+    <orderEntry type="library" name="Maven: org.apache.ivy:ivy:2.3.0" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:indy:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-groovysh:indy:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-console:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-templates:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-xml:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-swing:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: jline:jline:2.12" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-json:indy:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.codehaus.groovy:groovy-jsr223:indy:2.4.11" level="project" />
+    <orderEntry type="library" name="Maven: org.mindrot:jbcrypt:0.4" level="project" />
+    <orderEntry type="library" name="Maven: com.github.ben-manes.caffeine:caffeine:2.3.1" level="project" />
     <orderEntry type="library" name="Maven: org.twitter4j:twitter4j-stream:4.0.6" level="project" />
     <orderEntry type="library" name="Maven: org.twitter4j:twitter4j-core:4.0.6" level="project" />
     <orderEntry type="library" name="Maven: org.twitter4j:twitter4j-async:4.0.6" level="project" />
