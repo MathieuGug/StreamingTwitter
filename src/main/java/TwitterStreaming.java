@@ -91,7 +91,7 @@ public class TwitterStreaming {
 
         TwitterStream twitterStream = new TwitterStreamFactory(cb).getInstance();
         FilterQuery tweetFilterQuery = new FilterQuery();
-        tweetFilterQuery.track(new String[]{"#ArtificialIntelligence"});
+        tweetFilterQuery.track(new String[]{"russie", "poutine", "macron", "syrie", "rtenfrancais", "sputnik"});
 
         twitterStream.addListener(listener);
         twitterStream.filter(tweetFilterQuery);
