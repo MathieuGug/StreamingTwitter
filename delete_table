@@ -12,3 +12,4 @@ drop 'tweets_graph:labelConnections'
 drop 'tweets_graph:labelMetadata'
 drop 'tweets_graph:vertexIndices'
 drop 'tweets_graph:vertices'
+exit

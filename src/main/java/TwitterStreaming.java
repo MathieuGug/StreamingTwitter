@@ -6,13 +6,20 @@ import org.apache.tinkerpop.gremlin.structure.Vertex;
 import twitter4j.*;
 import twitter4j.conf.ConfigurationBuilder;
 
+import java.io.File;
+import java.io.IOException;
+import java.util.ArrayList;
+import java.util.Scanner;
+import java.util.List;
+import java.util.Arrays;
+
 public class TwitterStreaming {
     public static void main(String args []) throws Exception {
         // CHECKING INPUT PARAMETERS
         final ParameterTool params = ParameterTool.fromArgs(args);
         //System.out.println("Usage: TwitterStreaming +
         //        "[--twitter-source.consumerKey <key> --twitter-source.consumerSecret <secret> --twitter-source.token <token> --twitter-source.tokenSecret <tokenSecret>]");
-
+        //          --keywords <inputFile>
         String CONSUMER_KEY, CONSUMER_SECRET, ACCESS_TOKEN, ACCESS_TOKEN_SECRET;
         CONSUMER_KEY = params.get("twitter-source.consumerKey");
         CONSUMER_SECRET = params.get("twitter-source.consumerSecret");
@@ -28,13 +35,30 @@ public class TwitterStreaming {
         twitter4j.conf.Configuration twitter_cfg = cb.build();
 
         Twitter twitter =  new TwitterFactory(twitter_cfg).getInstance();
-        streamFeed(twitter_cfg, twitter);
+
+        // The keywords
+        try {
+            // usage --keywords input_file
+            String input_file = params.get("keywords");
+            System.out.println(input_file);
+            Scanner scanner = new Scanner(new File(input_file));
+            List<String> keywords = new ArrayList<>();
+            while (scanner.hasNextLine()) {
+                keywords.add(scanner.nextLine());
+            }
+            streamFeed(twitter_cfg, twitter, keywords.toArray(new String[0]));
+
+        } catch (IOException e) {
+            e.printStackTrace();
+            System.exit(1);
+        }
+
     }
 
-    private static void streamFeed(twitter4j.conf.Configuration cb, Twitter twitter) {
+    private static void streamFeed(twitter4j.conf.Configuration cb, Twitter twitter, String[] keywords) {
         org.apache.commons.configuration.Configuration cfg = new HBaseGraphConfiguration()
                     .setInstanceType(HBaseGraphConfiguration.InstanceType.DISTRIBUTED)
-                    .setGraphNamespace("tweets_graph2")
+                    .setGraphNamespace("tweets_graph")
                     .setCreateTables(true)
                     .set("hbase.zookeeper.quorum", "127.0.0.1")
                     .set("zookeeper.znode.parent", "/hbase")
@@ -91,9 +115,14 @@ public class TwitterStreaming {
 
         TwitterStream twitterStream = new TwitterStreamFactory(cb).getInstance();
         FilterQuery tweetFilterQuery = new FilterQuery();
-        tweetFilterQuery.track(new String[]{"russie", "poutine", "macron", "syrie", "rtenfrancais", "sputnik"});
+        //tweetFilterQuery.track(new String[]{"russie", "poutine", "macron", "syrie", "rtenfrancais", "sputnik"});
+
+        System.out.println(Arrays.toString(keywords));
+        tweetFilterQuery.track(keywords);
+        tweetFilterQuery.language("fr");
 
         twitterStream.addListener(listener);
         twitterStream.filter(tweetFilterQuery);
     }
+
 }

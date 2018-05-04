@@ -11,7 +11,7 @@ public class CreateGraphNodes {
     public static void main(String[] args) {
         Configuration cfg = new HBaseGraphConfiguration()
                 .setInstanceType(InstanceType.DISTRIBUTED)
-                .setGraphNamespace("tweets_graph2")
+                .setGraphNamespace("tweets_graph")
                 .setCreateTables(true)
                 .set("hbase.zookeeper.quorum", "127.0.0.1")
                 .set("zookeeper.znode.parent", "/hbase")
