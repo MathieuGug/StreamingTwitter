@@ -25,14 +25,14 @@ public class TwitterToGraph
     //                 CREATE THE VERTICES               //
     ///////////////////////////////////////////////////////
     public Vertex getOrCreateTweet(Status status) {
-        System.out.printf("%s - %s : %s\n", status.getId(), status.getUser().getScreenName(), status.getText());
+        //System.out.printf("%s - %s : %s\n", status.getId(), status.getUser().getScreenName(), status.getText());
 
         GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("id", status.getId());
         if (vt.hasNext()) {
             g.traversal().V(status.getId()).property("favourites_count", status.getFavoriteCount(),
                     "retweets_count", status.getRetweetCount());
 
-            System.out.println("Tweet data updated.");
+            //System.out.println("Tweet data updated.");
             return vt.next();
         }
         else {
@@ -50,24 +50,26 @@ public class TwitterToGraph
                     "friends_at_time", user.getFriendsCount(),
                     "statuses_at_time", user.getStatusesCount(),
                     "listed_at_time", user.getListedCount());
-            System.out.println("Tweet created!");
+            //System.out.println("Tweet created!");
             return tweet;
         }
     }
 
     public Vertex getOrCreateUser(User u) {
-        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("user_key", u.getName());
+        GraphTraversal<Vertex, Vertex> vt = g.traversal().V(u.getId());
+        //vt = g.traversal().V(u.getId()).has("screen_name", u.getScreenName());
         if (vt.hasNext()) {
-            g.traversal().V(u.getId()).property("favourites_count", u.getFavouritesCount(),
+            g.traversal().V(u.getId()).property("screen_name", u.getScreenName(),
+                    "favourites_count", u.getFavouritesCount(),
                     "followers_count", u.getFollowersCount(),
                     "friends_count", u.getFriendsCount(),
                     "statuses_count", u.getStatusesCount(),
                     "listed_count", u.getListedCount());
-            System.out.println("User updated.");
+            //System.out.println("User updated.");
             return vt.next();
         }
         else {
-            System.out.println("User created!");
+            //System.out.println("User created!");
 
             Vertex user = g.addVertex(T.id, u.getId(), T.label, "user",
                     "user_key", u.getName(),

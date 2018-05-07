@@ -91,7 +91,7 @@ public class TwitterStreaming {
             @Override
             public void onStatus(Status status) {
                 try {
-                    System.out.println("--------");
+                    //System.out.println("--------");
                     Vertex tweet;
 
                     ///////////////////////////////////////////////////////
@@ -101,7 +101,7 @@ public class TwitterStreaming {
                     tweet = tw.getOrCreateTweet(status);
                     tw.createEdgesFromTweet(tweet, status);
 
-                    System.out.println("Status written in database.");
+                    //System.out.println("Status written in database.");
                 } catch (Exception e) {
                     e.printStackTrace();
                 }
