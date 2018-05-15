@@ -106,7 +106,7 @@ public class TwitterToGraph
         GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("tag", h.getText());
         if (vt.hasNext()) return vt.next();
         else {
-            return g.addVertex(T.label, "hashtag", "tag", h.getText());
+            return g.addVertex(T.label, "hashtag", "tag", h.getText().toLowerCase());
         }
     }
 
@@ -134,8 +134,10 @@ public class TwitterToGraph
         status.addEdge("POSTED_VIA", getOrCreateSource(tweet.getSource()));
 
         // Hashtags, mentions, url
-        for (HashtagEntity hashtag : tweet.getHashtagEntities()) status.addEdge("HAS_TAG",
-                getOrCreateHashtag(hashtag));
+        for (HashtagEntity hashtag : tweet.getHashtagEntities()) {
+            status.addEdge("HAS_TAG",
+                    getOrCreateHashtag(hashtag));
+        }
         for (UserMentionEntity u : tweet.getUserMentionEntities()) status.addEdge("MENTIONS",
                 getOrCreateMention(u));
         for (URLEntity url : tweet.getURLEntities()) status.addEdge("HAS_LINK",
