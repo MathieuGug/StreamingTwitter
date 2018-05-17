@@ -46,7 +46,7 @@ public class TwitterStreaming {
             while (scanner.hasNextLine()) {
                 keywords.add(scanner.nextLine());
             }
-            streamFeed(twitter_cfg, twitter, keywords.toArray(new String[0]));
+            streamFeed(CONSUMER_KEY, twitter_cfg, twitter, keywords.toArray(new String[0]));
 
         } catch (IOException e) {
             e.printStackTrace();
@@ -55,7 +55,7 @@ public class TwitterStreaming {
 
     }
 
-    private static void streamFeed(twitter4j.conf.Configuration cb, Twitter twitter, String[] keywords) {
+    private static void streamFeed(String CONSUMER_KEY, twitter4j.conf.Configuration cb, Twitter twitter, String[] keywords) {
         org.apache.commons.configuration.Configuration cfg = new HBaseGraphConfiguration()
                     .setInstanceType(HBaseGraphConfiguration.InstanceType.DISTRIBUTED)
                     .setGraphNamespace("tweets_graph2")
@@ -113,7 +113,8 @@ public class TwitterStreaming {
             }
         };
 
-        TwitterStream twitterStream = new TwitterStreamFactory(cb).getInstance();
+
+        TwitterStream twitterStream = new HackedTwitterStreamFactory(CONSUMER_KEY, cb).getInstance();
         FilterQuery tweetFilterQuery = new FilterQuery();
         //tweetFilterQuery.track(new String[]{"russie", "poutine", "macron", "syrie", "rtenfrancais", "sputnik"});
 

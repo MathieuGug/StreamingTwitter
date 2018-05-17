@@ -1,4 +1,5 @@
 import org.apache.tinkerpop.gremlin.process.traversal.dsl.graph.GraphTraversal;
+import org.apache.tinkerpop.gremlin.structure.Edge;
 import org.apache.tinkerpop.gremlin.structure.Graph;
 import org.apache.tinkerpop.gremlin.structure.T;
 import org.apache.tinkerpop.gremlin.structure.Vertex;
@@ -129,14 +130,19 @@ public class TwitterToGraph
     ///////////////////////////////////////////////////////
     //                  CREATE THE EDGES                 //
     ///////////////////////////////////////////////////////
-    public void createEdgesFromTweet(Vertex status, Status tweet) throws Exception {
+    public void createEdgesFromTweet(Vertex status, Status tweet) throws Exception, TwitterException {
         getOrCreateUser(tweet.getUser()).addEdge("POSTED", getOrCreateTweet(tweet));
         status.addEdge("POSTED_VIA", getOrCreateSource(tweet.getSource()));
 
         // Hashtags, mentions, url
         for (HashtagEntity hashtag : tweet.getHashtagEntities()) {
-            status.addEdge("HAS_TAG",
-                    getOrCreateHashtag(hashtag));
+            // Check if the lower cased hashtag already exists for the tweet
+            GraphTraversal<Vertex, Vertex> hashtag_edge = g.traversal().V().has("tweet", "id", tweet.getId()).out("hashtag").has("tag", hashtag.getText().toLowerCase());
+            if (!hashtag_edge.hasNext()) {
+                status.addEdge("HAS_TAG",
+                        getOrCreateHashtag(hashtag));
+            }
+
         }
         for (UserMentionEntity u : tweet.getUserMentionEntities()) status.addEdge("MENTIONS",
                 getOrCreateMention(u));
@@ -144,13 +150,19 @@ public class TwitterToGraph
                 getOrCreateUrl(url));
 
         // Quoted, retweeted, in reply to
-        if (tweet.getInReplyToStatusId() != -1) {
-            Status in_reply_to = twitter.showStatus(tweet.getInReplyToStatusId());
-            status.addEdge("IN_REPLY_TO",
-                    getOrCreateUser(in_reply_to.getUser()));
+        // The tweet may not be accessible
+        try {
+            if (tweet.getInReplyToStatusId() != -1) {
+                Status in_reply_to = twitter.showStatus(tweet.getInReplyToStatusId());
+                status.addEdge("IN_REPLY_TO",
+                        getOrCreateUser(in_reply_to.getUser()));
+            }
+            if (tweet.getQuotedStatusId() != -1) status.addEdge("QUOTED_STATUS",
+                    getOrCreateTweet(tweet.getQuotedStatus()));
+        } catch (TwitterException e) {
+            e.printStackTrace();
         }
-        if (tweet.getQuotedStatusId() != -1) status.addEdge("QUOTED_STATUS",
-                getOrCreateTweet(tweet.getQuotedStatus()));
+
         if (tweet.isRetweet()) status.addEdge("RETWEETED_STATUS",
                 getOrCreateTweet(tweet.getRetweetedStatus()));
 
