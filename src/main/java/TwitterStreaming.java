@@ -92,13 +92,12 @@ public class TwitterStreaming {
             public void onStatus(Status status) {
                 try {
                     //System.out.println("--------");
-                    Vertex tweet;
 
                     ///////////////////////////////////////////////////////
                     //     POPULATE THE GRAPH FROM VARIOUS SEEDS         //
                     ///////////////////////////////////////////////////////
                     // Add the status :
-                    tweet = tw.getOrCreateTweet(status);
+                    Vertex tweet = tw.getOrCreateTweet(status);
                     tw.createEdgesFromTweet(tweet, status);
 
                     //System.out.println("Status written in database.");

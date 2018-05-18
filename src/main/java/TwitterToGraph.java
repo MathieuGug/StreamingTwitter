@@ -28,7 +28,7 @@ public class TwitterToGraph
     public Vertex getOrCreateTweet(Status status) {
         //System.out.printf("%s - %s : %s\n", status.getId(), status.getUser().getScreenName(), status.getText());
 
-        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("id", status.getId());
+        GraphTraversal<Vertex, Vertex> vt = g.traversal().V(status.getId());
         if (vt.hasNext()) {
             g.traversal().V(status.getId()).property("favourites_count", status.getFavoriteCount(),
                     "retweets_count", status.getRetweetCount());
@@ -94,36 +94,41 @@ public class TwitterToGraph
     }
 
     public Vertex getOrCreateMention(UserMentionEntity user) throws Exception {
-        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("id", user.getId());
-        User u = twitter.showUser(user.getId());
-
-        if (vt.hasNext()) return vt.next();
-        else {
-            return getOrCreateUser(u);
+        GraphTraversal<Vertex, Vertex> vt = g.traversal().V(user.getId());
+        try {
+            User u = twitter.showUser(user.getId());
+            if (vt.hasNext()) return vt.next();
+            else {
+                return getOrCreateUser(u);
+            }
+        } catch (Exception e) {
+            System.out.println("Cannot access to user " + user.getScreenName());
+            return null;
         }
     }
 
     public Vertex getOrCreateHashtag(HashtagEntity h) {
-        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("tag", h.getText());
+        String hash = h.getText().toLowerCase();
+        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("tag", hash);
         if (vt.hasNext()) return vt.next();
         else {
-            return g.addVertex(T.label, "hashtag", "tag", h.getText().toLowerCase());
+            return g.addVertex(T.id, hash, T.label, "hashtag", "tag", hash);
         }
     }
 
     private Vertex getOrCreateUrl(URLEntity u) {
-        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("expanded_url", u.getExpandedURL());
+        GraphTraversal<Vertex, Vertex> vt = g.traversal().V(u.getExpandedURL());
         if (vt.hasNext()) return vt.next();
         else {
-            return g.addVertex(T.label, "url", "expanded_url", u.getExpandedURL());
+            return g.addVertex(T.id, u.getExpandedURL(), T.label, "url", "expanded_url", u.getExpandedURL());
         }
     }
 
     private Vertex getOrCreateSource(String s) {
-        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("name", s);
+        GraphTraversal<Vertex, Vertex> vt = g.traversal().V(s);
         if (vt.hasNext()) return vt.next();
         else {
-            return g.addVertex(T.label, "source", "name", s);
+            return g.addVertex(T.id, s, T.label, "source", "name", s);
         }
     }
 
@@ -137,30 +142,35 @@ public class TwitterToGraph
         // Hashtags, mentions, url
         for (HashtagEntity hashtag : tweet.getHashtagEntities()) {
             // Check if the lower cased hashtag already exists for the tweet
-            GraphTraversal<Vertex, Vertex> hashtag_edge = g.traversal().V().has("tweet", "id", tweet.getId()).out("hashtag").has("tag", hashtag.getText().toLowerCase());
+            GraphTraversal<Vertex, Vertex> hashtag_edge = g.traversal().V(tweet.getId()).out("hashtag").has("tag", hashtag.getText().toLowerCase());
             if (!hashtag_edge.hasNext()) {
                 status.addEdge("HAS_TAG",
                         getOrCreateHashtag(hashtag));
             }
 
         }
-        for (UserMentionEntity u : tweet.getUserMentionEntities()) status.addEdge("MENTIONS",
-                getOrCreateMention(u));
+        for (UserMentionEntity u : tweet.getUserMentionEntities()) {
+            if(u != null) {
+                status.addEdge("MENTIONS",
+                        getOrCreateMention(u));
+            }
+        }
+        
         for (URLEntity url : tweet.getURLEntities()) status.addEdge("HAS_LINK",
                 getOrCreateUrl(url));
 
         // Quoted, retweeted, in reply to
         // The tweet may not be accessible
-        try {
             if (tweet.getInReplyToStatusId() != -1) {
-                Status in_reply_to = twitter.showStatus(tweet.getInReplyToStatusId());
-                status.addEdge("IN_REPLY_TO",
-                        getOrCreateUser(in_reply_to.getUser()));
+                try {
+                    Status in_reply_to = twitter.showStatus(tweet.getInReplyToStatusId());
+                    status.addEdge("IN_REPLY_TO",
+                            getOrCreateUser(in_reply_to.getUser()));
+                } catch (Exception e) {
+                    e.printStackTrace();
             }
             if (tweet.getQuotedStatusId() != -1) status.addEdge("QUOTED_STATUS",
                     getOrCreateTweet(tweet.getQuotedStatus()));
-        } catch (TwitterException e) {
-            e.printStackTrace();
         }
 
         if (tweet.isRetweet()) status.addEdge("RETWEETED_STATUS",
