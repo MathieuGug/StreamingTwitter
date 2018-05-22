@@ -196,3 +196,67 @@ TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorr
 	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
 	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
 	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - User has been suspended.
+code - 63
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=4c04b56d or
+	http://www.google.co.jp/search?q=e21b3f53
+TwitterException{exceptionCode=[4c04b56d-e21b3f53], statusCode=403, message=User has been suspended., code=63, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=880, limit=900, resetTimeInSeconds=1527005846, secondsUntilReset=780}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1768)
+	at twitter4j.TwitterImpl.showUser(TwitterImpl.java:806)
+	at TwitterToGraph.getOrCreateMention(TwitterToGraph.java:105)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:158)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=892, limit=900, resetTimeInSeconds=1527006551, secondsUntilReset=822}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=862, limit=900, resetTimeInSeconds=1527006551, secondsUntilReset=341}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
