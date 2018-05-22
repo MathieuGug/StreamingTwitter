@@ -11,7 +11,7 @@ public class CreateGraphNodes {
     public static void main(String[] args) {
         Configuration cfg = new HBaseGraphConfiguration()
                 .setInstanceType(InstanceType.DISTRIBUTED)
-                .setGraphNamespace("tweets_graph2")
+                .setGraphNamespace("tweets_graph3")
                 .setCreateTables(true)
                 .set("hbase.zookeeper.quorum", "127.0.0.1")
                 .set("zookeeper.znode.parent", "/hbase")
@@ -25,8 +25,8 @@ public class CreateGraphNodes {
                 "id", ValueType.LONG,
                 "user_key", ValueType.STRING,
                 "screen_name", ValueType.STRING,
+                "created", ValueType.TIMESTAMP,
                 "created_at", ValueType.LONG,
-                "created_str", ValueType.STRING,
                 "favourites_count", ValueType.INT,
                 "followers_count", ValueType.INT,
                 "listed_count", ValueType.INT,
@@ -43,7 +43,8 @@ public class CreateGraphNodes {
         graph.createLabel(ElementType.VERTEX, "tweet", /* id */ ValueType.LONG,
                 "id", ValueType.LONG,
                 "created_at", ValueType.LONG,
-                "created_str", ValueType.STRING,
+                "created", ValueType.TIMESTAMP,
+                "created_at", ValueType.LONG,
                 "text", ValueType.STRING,
                 "favourites_count", ValueType.INT,
                 "retweets_count", ValueType.INT,

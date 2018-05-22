@@ -58,12 +58,12 @@ public class TwitterStreaming {
     private static void streamFeed(String CONSUMER_KEY, twitter4j.conf.Configuration cb, Twitter twitter, String[] keywords) {
         org.apache.commons.configuration.Configuration cfg = new HBaseGraphConfiguration()
                     .setInstanceType(HBaseGraphConfiguration.InstanceType.DISTRIBUTED)
-                    .setGraphNamespace("tweets_graph2")
+                    .setGraphNamespace("tweets_graph3")
                     .setCreateTables(true)
                     .set("hbase.zookeeper.quorum", "127.0.0.1")
                     .set("zookeeper.znode.parent", "/hbase")
                     .setUseSchema(true);
-            HBaseGraph graph = HBaseGraph.open(cfg);
+        HBaseGraph graph = HBaseGraph.open(cfg);
 
         TwitterToGraph tw = new TwitterToGraph(twitter, graph);
 

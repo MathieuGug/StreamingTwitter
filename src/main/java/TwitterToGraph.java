@@ -9,6 +9,7 @@ import java.time.Instant;
 import java.time.LocalDate;
 import java.time.ZoneId;
 import java.util.Date;
+import java.time.LocalDateTime;
 
 public class TwitterToGraph
 {
@@ -38,11 +39,13 @@ public class TwitterToGraph
         }
         else {
             User user = status.getUser();
+            ZoneId zone = ZoneId.of("CET");
+            LocalDateTime created = status.getCreatedAt().toInstant().atZone(zone).toLocalDateTime();
 
             Vertex tweet = g.addVertex(T.id, status.getId(), T.label, "tweet",
                     "id", status.getId(),
-                    "created_str", status.getCreatedAt().toString(),
                     "created_at", status.getCreatedAt().getTime()/1000,
+                    "created", created,
                     "text", status.getText(),
                     "favourites_count", status.getFavoriteCount(),
                     "retweets_count", status.getRetweetCount(),
@@ -71,12 +74,15 @@ public class TwitterToGraph
         }
         else {
             //System.out.println("User created!");
+            ZoneId zone = ZoneId.of("CET");
+            LocalDateTime created = u.getCreatedAt().toInstant().atZone(zone).toLocalDateTime();
 
             Vertex user = g.addVertex(T.id, u.getId(), T.label, "user",
                     "user_key", u.getName(),
                     "screen_name", u.getScreenName(),
                     "created_at", u.getCreatedAt().getTime()/1000,
-                    "created_str", u.getCreatedAt().toString(),
+                    "created", created,
+                    "created", u.getCreatedAt().toString(),
                     "favourites_count", u.getFavouritesCount(),
                     "followers_count", u.getFollowersCount(),
                     "listed_count", u.getListedCount(),
@@ -96,12 +102,13 @@ public class TwitterToGraph
     public Vertex getOrCreateMention(UserMentionEntity user) throws Exception {
         GraphTraversal<Vertex, Vertex> vt = g.traversal().V(user.getId());
         try {
-            User u = twitter.showUser(user.getId());
             if (vt.hasNext()) return vt.next();
             else {
+                User u = twitter.showUser(user.getId());
                 return getOrCreateUser(u);
             }
         } catch (Exception e) {
+            e.printStackTrace();
             System.out.println("Cannot access to user " + user.getScreenName());
             return null;
         }
@@ -109,7 +116,7 @@ public class TwitterToGraph
 
     public Vertex getOrCreateHashtag(HashtagEntity h) {
         String hash = h.getText().toLowerCase();
-        GraphTraversal<Vertex, Vertex> vt = g.traversal().V().has("tag", hash);
+        GraphTraversal<Vertex, Vertex> vt = g.traversal().V(hash);
         if (vt.hasNext()) return vt.next();
         else {
             return g.addVertex(T.id, hash, T.label, "hashtag", "tag", hash);
@@ -142,7 +149,7 @@ public class TwitterToGraph
         // Hashtags, mentions, url
         for (HashtagEntity hashtag : tweet.getHashtagEntities()) {
             // Check if the lower cased hashtag already exists for the tweet
-            GraphTraversal<Vertex, Vertex> hashtag_edge = g.traversal().V(tweet.getId()).out("hashtag").has("tag", hashtag.getText().toLowerCase());
+            GraphTraversal<Vertex, Vertex> hashtag_edge = g.traversal().V(tweet.getId()).out("hashtag").has(T.id, hashtag.getText().toLowerCase());
             if (!hashtag_edge.hasNext()) {
                 status.addEdge("HAS_TAG",
                         getOrCreateHashtag(hashtag));
@@ -150,12 +157,12 @@ public class TwitterToGraph
 
         }
         for (UserMentionEntity u : tweet.getUserMentionEntities()) {
-            if(u != null) {
-                status.addEdge("MENTIONS",
-                        getOrCreateMention(u));
+            Vertex mentionedUser = getOrCreateMention(u);
+            if(mentionedUser != null) {
+                status.addEdge("MENTIONS", mentionedUser);
             }
         }
-        
+
         for (URLEntity url : tweet.getURLEntities()) status.addEdge("HAS_LINK",
                 getOrCreateUrl(url));
 
