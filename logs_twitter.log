@@ -3,30 +3,30 @@ SLF4J: Found binding in [jar:file:/usr/local/hadoop/share/hadoop/common/lib/slf4
 SLF4J: Found binding in [jar:file:/usr/local/hbase/lib/slf4j-log4j12-1.7.5.jar!/org/slf4j/impl/StaticLoggerBinder.class]
 SLF4J: See http://www.slf4j.org/codes.html#multiple_bindings for an explanation.
 SLF4J: Actual binding is of type [org.slf4j.impl.Log4jLoggerFactory]
-18/05/22 15:56:25 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
-18/05/22 15:56:26 INFO zookeeper.RecoverableZooKeeper: Process identifier=hconnection-0x796b7d6c connecting to ZooKeeper ensemble=127.0.0.1:2181
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:host.name=192.168.0.18
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:java.version=1.8.0_161
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:java.class.path=/usr/local/hadoop/etc/hadoop:/usr/local/hadoop/share/hadoop/common/lib/activation-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/usr/local/hadoop/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/local/hadoop/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/usr/local/hadoop/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/usr/local/hadoop/share/hadoop/common/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/common/lib/avro-1.7.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-configuration-1.6.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-digester-1.8.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-httpclient-3.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-net-3.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-client-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-framework-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-recipes-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/gson-2.2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-annotations-2.7.5.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-auth-2.7.5.jar:/usr/local/hadoop/share/hadoop/common/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/common/lib/httpclient-4.2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/httpcore-4.2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-json-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/jets3t-0.9.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-sslengine-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/jsch-0.1.54.jar:/usr/local/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/common/lib/mockito-all-1.8.5.jar:/usr/local/hadoop/share/hadoop/common/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/common/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-api-1.7.10.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar:/usr/local/hadoop/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop/share/hadoop/common/lib/stax-api-1.0-2.jar:/usr/local/hadoop/share/hadoop/common/lib/xmlenc-0.52.jar:/usr/local/hadoop/share/hadoop/common/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/common/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-2.7.5-tests.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/common/hadoop-nfs-2.7.5.jar:/usr/local/hadoop/share/hadoop/hdfs:/usr/local/hadoop/share/hadoop/hdfs/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-all-4.0.23.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-2.7.5-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-2.7.5.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/lib/activation-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-3.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-client-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-json-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6-tests.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-api-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-client-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-registry-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/guice-3.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/hadoop-annotations-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.5-tests.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.5.jar:/contrib/capacity-scheduler/*.jar:/usr/local/hbase/lib/activation-1.1.jar:/usr/local/hbase/lib/aopalliance-1.0.jar:/usr/local/hbase/lib/apacheds-i18n-2.0.0-M15.jar:/usr/local/hbase/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/local/hbase/lib/api-asn1-api-1.0.0-M20.jar:/usr/local/hbase/lib/api-util-1.0.0-M20.jar:/usr/local/hbase/lib/asm-3.1.jar:/usr/local/hbase/lib/avro-1.7.4.jar:/usr/local/hbase/lib/commons-beanutils-1.7.0.jar:/usr/local/hbase/lib/commons-beanutils-core-1.8.0.jar:/usr/local/hbase/lib/commons-cli-1.2.jar:/usr/local/hbase/lib/commons-codec-1.9.jar:/usr/local/hbase/lib/commons-collections-3.2.2.jar:/usr/local/hbase/lib/commons-compress-1.4.1.jar:/usr/local/hbase/lib/commons-configuration-1.6.jar:/usr/local/hbase/lib/commons-daemon-1.0.13.jar:/usr/local/hbase/lib/commons-digester-1.8.jar:/usr/local/hbase/lib/commons-el-1.0.jar:/usr/local/hbase/lib/commons-httpclient-3.1.jar:/usr/local/hbase/lib/commons-io-2.4.jar:/usr/local/hbase/lib/commons-lang-2.6.jar:/usr/local/hbase/lib/commons-logging-1.2.jar:/usr/local/hbase/lib/commons-math-2.2.jar:/usr/local/hbase/lib/commons-math3-3.1.1.jar:/usr/local/hbase/lib/commons-net-3.1.jar:/usr/local/hbase/lib/disruptor-3.3.0.jar:/usr/local/hbase/lib/findbugs-annotations-1.3.9-1.jar:/usr/local/hbase/lib/guava-12.0.1.jar:/usr/local/hbase/lib/guice-3.0.jar:/usr/local/hbase/lib/guice-servlet-3.0.jar:/usr/local/hbase/lib/hadoop-annotations-2.5.1.jar:/usr/local/hbase/lib/hadoop-auth-2.5.1.jar:/usr/local/hbase/lib/hadoop-client-2.5.1.jar:/usr/local/hbase/lib/hadoop-common-2.5.1.jar:/usr/local/hbase/lib/hadoop-hdfs-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-app-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-common-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-core-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-jobclient-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-shuffle-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-api-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-client-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-common-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-server-common-2.5.1.jar:/usr/local/hbase/lib/hbase-annotations-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-annotations-1.2.6.jar:/usr/local/hbase/lib/hbase-client-1.2.6.jar:/usr/local/hbase/lib/hbase-common-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-common-1.2.6.jar:/usr/local/hbase/lib/hbase-examples-1.2.6.jar:/usr/local/hbase/lib/hbase-external-blockcache-1.2.6.jar:/usr/local/hbase/lib/hbase-hadoop-compat-1.2.6.jar:/usr/local/hbase/lib/hbase-hadoop2-compat-1.2.6.jar:/usr/local/hbase/lib/hbase-it-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-it-1.2.6.jar:/usr/local/hbase/lib/hbase-prefix-tree-1.2.6.jar:/usr/local/hbase/lib/hbase-procedure-1.2.6.jar:/usr/local/hbase/lib/hbase-protocol-1.2.6.jar:/usr/local/hbase/lib/hbase-resource-bundle-1.2.6.jar:/usr/local/hbase/lib/hbase-rest-1.2.6.jar:/usr/local/hbase/lib/hbase-server-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-server-1.2.6.jar:/usr/local/hbase/lib/hbase-shell-1.2.6.jar:/usr/local/hbase/lib/hbase-thrift-1.2.6.jar:/usr/local/hbase/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hbase/lib/httpclient-4.2.5.jar:/usr/local/hbase/lib/httpcore-4.4.1.jar:/usr/local/hbase/lib/jackson-core-asl-1.9.13.jar:/usr/local/hbase/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hbase/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hbase/lib/jackson-xc-1.9.13.jar:/usr/local/hbase/lib/jamon-runtime-2.4.1.jar:/usr/local/hbase/lib/jasper-compiler-5.5.23.jar:/usr/local/hbase/lib/jasper-runtime-5.5.23.jar:/usr/local/hbase/lib/java-xmlbuilder-0.4.jar:/usr/local/hbase/lib/javax.inject-1.jar:/usr/local/hbase/lib/jaxb-api-2.2.2.jar:/usr/local/hbase/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hbase/lib/jcodings-1.0.8.jar:/usr/local/hbase/lib/jersey-client-1.9.jar:/usr/local/hbase/lib/jersey-core-1.9.jar:/usr/local/hbase/lib/jersey-guice-1.9.jar:/usr/local/hbase/lib/jersey-json-1.9.jar:/usr/local/hbase/lib/jersey-server-1.9.jar:/usr/local/hbase/lib/jets3t-0.9.0.jar:/usr/local/hbase/lib/jettison-1.3.3.jar:/usr/local/hbase/lib/jetty-6.1.26.jar:/usr/local/hbase/lib/jetty-sslengine-6.1.26.jar:/usr/local/hbase/lib/jetty-util-6.1.26.jar:/usr/local/hbase/lib/joni-2.1.2.jar:/usr/local/hbase/lib/jruby-complete-1.6.8.jar:/usr/local/hbase/lib/jsch-0.1.42.jar:/usr/local/hbase/lib/jsp-2.1-6.1.14.jar:/usr/local/hbase/lib/jsp-api-2.1-6.1.14.jar:/usr/local/hbase/lib/junit-4.12.jar:/usr/local/hbase/lib/leveldbjni-all-1.8.jar:/usr/local/hbase/lib/libthrift-0.9.3.jar:/usr/local/hbase/lib/log4j-1.2.17.jar:/usr/local/hbase/lib/metrics-core-2.2.0.jar:/usr/local/hbase/lib/netty-all-4.0.23.Final.jar:/usr/local/hbase/lib/paranamer-2.3.jar:/usr/local/hbase/lib/protobuf-java-2.5.0.jar:/usr/local/hbase/lib/servlet-api-2.5-6.1.14.jar:/usr/local/hbase/lib/servlet-api-2.5.jar:/usr/local/hbase/lib/slf4j-api-1.7.7.jar:/usr/local/hbase/lib/slf4j-log4j12-1.7.5.jar:/usr/local/hbase/lib/snappy-java-1.0.4.1.jar:/usr/local/hbase/lib/spymemcached-2.11.6.jar:/usr/local/hbase/lib/xmlenc-0.52.jar:/usr/local/hbase/lib/xz-1.0.jar:/usr/local/hbase/lib/zookeeper-3.4.6.jar
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:java.library.path=/usr/local/hadoop/lib/native
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/var/folders/n5/tm8jbtp143z2cq3_hckxnm9h0000gq/T/
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:os.name=Mac OS X
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:os.arch=x86_64
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:os.version=10.13.2
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:user.name=Mathieu
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:user.home=/Users/Mathieu
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Client environment:user.dir=/Users/Mathieu/projects/streaming
-18/05/22 15:56:26 INFO zookeeper.ZooKeeper: Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=180000 watcher=hconnection-0x796b7d6c0x0, quorum=127.0.0.1:2181, baseZNode=/hbase
-18/05/22 15:56:26 INFO zookeeper.ClientCnxn: Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
-18/05/22 15:56:26 INFO zookeeper.ClientCnxn: Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
-18/05/22 15:56:26 INFO zookeeper.ClientCnxn: Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x16387f215120010, negotiated timeout = 90000
-18/05/22 15:56:29 INFO twitter4j.HackedTwitterStreamImpl: Establishing connection [jDdY3IbRhZuMZvPq3wWf3rVaF].
-18/05/22 15:56:32 INFO twitter4j.HackedTwitterStreamImpl: Connection established [jDdY3IbRhZuMZvPq3wWf3rVaF].
-18/05/22 15:56:32 INFO twitter4j.HackedTwitterStreamImpl: Receiving status stream [jDdY3IbRhZuMZvPq3wWf3rVaF].
+18/05/23 12:05:08 WARN util.NativeCodeLoader: Unable to load native-hadoop library for your platform... using builtin-java classes where applicable
+18/05/23 12:05:12 INFO zookeeper.RecoverableZooKeeper: Process identifier=hconnection-0x796b7d6c connecting to ZooKeeper ensemble=127.0.0.1:2181
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:zookeeper.version=3.4.6-1569965, built on 02/20/2014 09:09 GMT
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:host.name=192.168.0.18
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:java.version=1.8.0_161
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:java.vendor=Oracle Corporation
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:java.home=/Library/Java/JavaVirtualMachines/jdk1.8.0_161.jdk/Contents/Home/jre
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:java.class.path=/usr/local/hadoop/etc/hadoop:/usr/local/hadoop/share/hadoop/common/lib/activation-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/apacheds-i18n-2.0.0-M15.jar:/usr/local/hadoop/share/hadoop/common/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/local/hadoop/share/hadoop/common/lib/api-asn1-api-1.0.0-M20.jar:/usr/local/hadoop/share/hadoop/common/lib/api-util-1.0.0-M20.jar:/usr/local/hadoop/share/hadoop/common/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/common/lib/avro-1.7.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-1.7.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-beanutils-core-1.8.0.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-configuration-1.6.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-digester-1.8.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-httpclient-3.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-math3-3.1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/commons-net-3.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-client-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-framework-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/curator-recipes-2.7.1.jar:/usr/local/hadoop/share/hadoop/common/lib/gson-2.2.4.jar:/usr/local/hadoop/share/hadoop/common/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-annotations-2.7.5.jar:/usr/local/hadoop/share/hadoop/common/lib/hadoop-auth-2.7.5.jar:/usr/local/hadoop/share/hadoop/common/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/common/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/common/lib/httpclient-4.2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/httpcore-4.2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/common/lib/java-xmlbuilder-0.4.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop/share/hadoop/common/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-json-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/common/lib/jets3t-0.9.0.jar:/usr/local/hadoop/share/hadoop/common/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-sslengine-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/common/lib/jsch-0.1.54.jar:/usr/local/hadoop/share/hadoop/common/lib/jsp-api-2.1.jar:/usr/local/hadoop/share/hadoop/common/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/common/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/common/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/common/lib/mockito-all-1.8.5.jar:/usr/local/hadoop/share/hadoop/common/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/common/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/common/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/common/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-api-1.7.10.jar:/usr/local/hadoop/share/hadoop/common/lib/slf4j-log4j12-1.7.10.jar:/usr/local/hadoop/share/hadoop/common/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop/share/hadoop/common/lib/stax-api-1.0-2.jar:/usr/local/hadoop/share/hadoop/common/lib/xmlenc-0.52.jar:/usr/local/hadoop/share/hadoop/common/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/common/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-2.7.5-tests.jar:/usr/local/hadoop/share/hadoop/common/hadoop-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/common/hadoop-nfs-2.7.5.jar:/usr/local/hadoop/share/hadoop/hdfs:/usr/local/hadoop/share/hadoop/hdfs/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-daemon-1.0.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/netty-all-4.0.23.Final.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xercesImpl-2.9.1.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xml-apis-1.3.04.jar:/usr/local/hadoop/share/hadoop/hdfs/lib/xmlenc-0.52.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-2.7.5-tests.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-2.7.5.jar:/usr/local/hadoop/share/hadoop/hdfs/hadoop-hdfs-nfs-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/lib/activation-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-cli-1.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-codec-1.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-collections-3.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-lang-2.6.jar:/usr/local/hadoop/share/hadoop/yarn/lib/commons-logging-1.1.3.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guava-11.0.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-3.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/guice-servlet-3.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jackson-xc-1.9.13.jar:/usr/local/hadoop/share/hadoop/yarn/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-api-2.2.2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-client-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-guice-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-json-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jettison-1.1.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jetty-util-6.1.26.jar:/usr/local/hadoop/share/hadoop/yarn/lib/jsr305-3.0.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/yarn/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/yarn/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/yarn/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/servlet-api-2.5.jar:/usr/local/hadoop/share/hadoop/yarn/lib/stax-api-1.0-2.jar:/usr/local/hadoop/share/hadoop/yarn/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6-tests.jar:/usr/local/hadoop/share/hadoop/yarn/lib/zookeeper-3.4.6.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-api-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-distributedshell-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-applications-unmanaged-am-launcher-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-client-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-registry-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-applicationhistoryservice-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-nodemanager-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-resourcemanager-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-sharedcachemanager-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-tests-2.7.5.jar:/usr/local/hadoop/share/hadoop/yarn/hadoop-yarn-server-web-proxy-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/aopalliance-1.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/asm-3.2.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/avro-1.7.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/commons-compress-1.4.1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/commons-io-2.4.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/guice-3.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/guice-servlet-3.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/hadoop-annotations-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/hamcrest-core-1.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jackson-core-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/javax.inject-1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-core-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-guice-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/jersey-server-1.9.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/junit-4.11.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/leveldbjni-all-1.8.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/log4j-1.2.17.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/netty-3.6.2.Final.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/paranamer-2.3.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/protobuf-java-2.5.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/snappy-java-1.0.4.1.jar:/usr/local/hadoop/share/hadoop/mapreduce/lib/xz-1.0.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-app-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-common-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-core-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-hs-plugins-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.5-tests.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-jobclient-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-client-shuffle-2.7.5.jar:/usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.7.5.jar:/contrib/capacity-scheduler/*.jar:/usr/local/hbase/lib/activation-1.1.jar:/usr/local/hbase/lib/aopalliance-1.0.jar:/usr/local/hbase/lib/apacheds-i18n-2.0.0-M15.jar:/usr/local/hbase/lib/apacheds-kerberos-codec-2.0.0-M15.jar:/usr/local/hbase/lib/api-asn1-api-1.0.0-M20.jar:/usr/local/hbase/lib/api-util-1.0.0-M20.jar:/usr/local/hbase/lib/asm-3.1.jar:/usr/local/hbase/lib/avro-1.7.4.jar:/usr/local/hbase/lib/commons-beanutils-1.7.0.jar:/usr/local/hbase/lib/commons-beanutils-core-1.8.0.jar:/usr/local/hbase/lib/commons-cli-1.2.jar:/usr/local/hbase/lib/commons-codec-1.9.jar:/usr/local/hbase/lib/commons-collections-3.2.2.jar:/usr/local/hbase/lib/commons-compress-1.4.1.jar:/usr/local/hbase/lib/commons-configuration-1.6.jar:/usr/local/hbase/lib/commons-daemon-1.0.13.jar:/usr/local/hbase/lib/commons-digester-1.8.jar:/usr/local/hbase/lib/commons-el-1.0.jar:/usr/local/hbase/lib/commons-httpclient-3.1.jar:/usr/local/hbase/lib/commons-io-2.4.jar:/usr/local/hbase/lib/commons-lang-2.6.jar:/usr/local/hbase/lib/commons-logging-1.2.jar:/usr/local/hbase/lib/commons-math-2.2.jar:/usr/local/hbase/lib/commons-math3-3.1.1.jar:/usr/local/hbase/lib/commons-net-3.1.jar:/usr/local/hbase/lib/disruptor-3.3.0.jar:/usr/local/hbase/lib/findbugs-annotations-1.3.9-1.jar:/usr/local/hbase/lib/guava-12.0.1.jar:/usr/local/hbase/lib/guice-3.0.jar:/usr/local/hbase/lib/guice-servlet-3.0.jar:/usr/local/hbase/lib/hadoop-annotations-2.5.1.jar:/usr/local/hbase/lib/hadoop-auth-2.5.1.jar:/usr/local/hbase/lib/hadoop-client-2.5.1.jar:/usr/local/hbase/lib/hadoop-common-2.5.1.jar:/usr/local/hbase/lib/hadoop-hdfs-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-app-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-common-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-core-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-jobclient-2.5.1.jar:/usr/local/hbase/lib/hadoop-mapreduce-client-shuffle-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-api-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-client-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-common-2.5.1.jar:/usr/local/hbase/lib/hadoop-yarn-server-common-2.5.1.jar:/usr/local/hbase/lib/hbase-annotations-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-annotations-1.2.6.jar:/usr/local/hbase/lib/hbase-client-1.2.6.jar:/usr/local/hbase/lib/hbase-common-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-common-1.2.6.jar:/usr/local/hbase/lib/hbase-examples-1.2.6.jar:/usr/local/hbase/lib/hbase-external-blockcache-1.2.6.jar:/usr/local/hbase/lib/hbase-hadoop-compat-1.2.6.jar:/usr/local/hbase/lib/hbase-hadoop2-compat-1.2.6.jar:/usr/local/hbase/lib/hbase-it-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-it-1.2.6.jar:/usr/local/hbase/lib/hbase-prefix-tree-1.2.6.jar:/usr/local/hbase/lib/hbase-procedure-1.2.6.jar:/usr/local/hbase/lib/hbase-protocol-1.2.6.jar:/usr/local/hbase/lib/hbase-resource-bundle-1.2.6.jar:/usr/local/hbase/lib/hbase-rest-1.2.6.jar:/usr/local/hbase/lib/hbase-server-1.2.6-tests.jar:/usr/local/hbase/lib/hbase-server-1.2.6.jar:/usr/local/hbase/lib/hbase-shell-1.2.6.jar:/usr/local/hbase/lib/hbase-thrift-1.2.6.jar:/usr/local/hbase/lib/htrace-core-3.1.0-incubating.jar:/usr/local/hbase/lib/httpclient-4.2.5.jar:/usr/local/hbase/lib/httpcore-4.4.1.jar:/usr/local/hbase/lib/jackson-core-asl-1.9.13.jar:/usr/local/hbase/lib/jackson-jaxrs-1.9.13.jar:/usr/local/hbase/lib/jackson-mapper-asl-1.9.13.jar:/usr/local/hbase/lib/jackson-xc-1.9.13.jar:/usr/local/hbase/lib/jamon-runtime-2.4.1.jar:/usr/local/hbase/lib/jasper-compiler-5.5.23.jar:/usr/local/hbase/lib/jasper-runtime-5.5.23.jar:/usr/local/hbase/lib/java-xmlbuilder-0.4.jar:/usr/local/hbase/lib/javax.inject-1.jar:/usr/local/hbase/lib/jaxb-api-2.2.2.jar:/usr/local/hbase/lib/jaxb-impl-2.2.3-1.jar:/usr/local/hbase/lib/jcodings-1.0.8.jar:/usr/local/hbase/lib/jersey-client-1.9.jar:/usr/local/hbase/lib/jersey-core-1.9.jar:/usr/local/hbase/lib/jersey-guice-1.9.jar:/usr/local/hbase/lib/jersey-json-1.9.jar:/usr/local/hbase/lib/jersey-server-1.9.jar:/usr/local/hbase/lib/jets3t-0.9.0.jar:/usr/local/hbase/lib/jettison-1.3.3.jar:/usr/local/hbase/lib/jetty-6.1.26.jar:/usr/local/hbase/lib/jetty-sslengine-6.1.26.jar:/usr/local/hbase/lib/jetty-util-6.1.26.jar:/usr/local/hbase/lib/joni-2.1.2.jar:/usr/local/hbase/lib/jruby-complete-1.6.8.jar:/usr/local/hbase/lib/jsch-0.1.42.jar:/usr/local/hbase/lib/jsp-2.1-6.1.14.jar:/usr/local/hbase/lib/jsp-api-2.1-6.1.14.jar:/usr/local/hbase/lib/junit-4.12.jar:/usr/local/hbase/lib/leveldbjni-all-1.8.jar:/usr/local/hbase/lib/libthrift-0.9.3.jar:/usr/local/hbase/lib/log4j-1.2.17.jar:/usr/local/hbase/lib/metrics-core-2.2.0.jar:/usr/local/hbase/lib/netty-all-4.0.23.Final.jar:/usr/local/hbase/lib/paranamer-2.3.jar:/usr/local/hbase/lib/protobuf-java-2.5.0.jar:/usr/local/hbase/lib/servlet-api-2.5-6.1.14.jar:/usr/local/hbase/lib/servlet-api-2.5.jar:/usr/local/hbase/lib/slf4j-api-1.7.7.jar:/usr/local/hbase/lib/slf4j-log4j12-1.7.5.jar:/usr/local/hbase/lib/snappy-java-1.0.4.1.jar:/usr/local/hbase/lib/spymemcached-2.11.6.jar:/usr/local/hbase/lib/xmlenc-0.52.jar:/usr/local/hbase/lib/xz-1.0.jar:/usr/local/hbase/lib/zookeeper-3.4.6.jar
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:java.library.path=/usr/local/hadoop/lib/native
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:java.io.tmpdir=/var/folders/n5/tm8jbtp143z2cq3_hckxnm9h0000gq/T/
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:java.compiler=<NA>
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:os.name=Mac OS X
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:os.arch=x86_64
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:os.version=10.13.2
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:user.name=Mathieu
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:user.home=/Users/Mathieu
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Client environment:user.dir=/Users/Mathieu/projects/streaming
+18/05/23 12:05:12 INFO zookeeper.ZooKeeper: Initiating client connection, connectString=127.0.0.1:2181 sessionTimeout=180000 watcher=hconnection-0x796b7d6c0x0, quorum=127.0.0.1:2181, baseZNode=/hbase
+18/05/23 12:05:12 INFO zookeeper.ClientCnxn: Opening socket connection to server 127.0.0.1/127.0.0.1:2181. Will not attempt to authenticate using SASL (unknown error)
+18/05/23 12:05:12 INFO zookeeper.ClientCnxn: Socket connection established to 127.0.0.1/127.0.0.1:2181, initiating session
+18/05/23 12:05:13 INFO zookeeper.ClientCnxn: Session establishment complete on server 127.0.0.1/127.0.0.1:2181, sessionid = 0x16387f215120014, negotiated timeout = 90000
+18/05/23 12:05:26 INFO twitter4j.HackedTwitterStreamImpl: Establishing connection [jDdY3IbRhZuMZvPq3wWf3rVaF].
+18/05/23 12:05:33 INFO twitter4j.HackedTwitterStreamImpl: Connection established [jDdY3IbRhZuMZvPq3wWf3rVaF].
+18/05/23 12:05:33 INFO twitter4j.HackedTwitterStreamImpl: Receiving status stream [jDdY3IbRhZuMZvPq3wWf3rVaF].
 403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
 message - Sorry, you are not authorized to see this status.
 code - 179
@@ -34,70 +34,7 @@ code - 179
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=fc7b1ad4 or
 	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=854, limit=900, resetTimeInSeconds=1526998313, secondsUntilReset=113}, version=4.0.6}
-	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
-	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
-	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
-	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
-	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
-	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
-	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
-	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
-	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
-	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
-	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
-	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
-	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
-403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-message - Sorry, you are not authorized to see this status.
-code - 179
-
-Relevant discussions can be found on the Internet at:
-	http://www.google.co.jp/search?q=fc7b1ad4 or
-	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=887, limit=900, resetTimeInSeconds=1527000151, secondsUntilReset=716}, version=4.0.6}
-	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
-	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
-	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
-	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
-	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
-	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
-	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
-	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
-	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
-	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
-	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
-	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
-	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
-403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-message - Sorry, you are not authorized to see this status.
-code - 179
-
-Relevant discussions can be found on the Internet at:
-	http://www.google.co.jp/search?q=fc7b1ad4 or
-	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=882, limit=900, resetTimeInSeconds=1527001072, secondsUntilReset=593}, version=4.0.6}
-	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
-	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
-	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
-	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
-	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
-	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
-	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
-	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
-	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
-	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
-	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
-	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
-	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
-403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
-message - Sorry, you are not authorized to see this status.
-code - 179
-
-Relevant discussions can be found on the Internet at:
-	http://www.google.co.jp/search?q=fc7b1ad4 or
-	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=870, limit=900, resetTimeInSeconds=1527001072, secondsUntilReset=338}, version=4.0.6}
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=893, limit=900, resetTimeInSeconds=1527071280, secondsUntilReset=826}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
@@ -118,7 +55,7 @@ code - 63
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=4c04b56d or
 	http://www.google.co.jp/search?q=e21b3f53
-TwitterException{exceptionCode=[4c04b56d-e21b3f53], statusCode=403, message=User has been suspended., code=63, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=875, limit=900, resetTimeInSeconds=1527002009, secondsUntilReset=809}, version=4.0.6}
+TwitterException{exceptionCode=[4c04b56d-e21b3f53], statusCode=403, message=User has been suspended., code=63, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=896, limit=900, resetTimeInSeconds=1527071766, secondsUntilReset=896}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
@@ -140,7 +77,7 @@ code - 179
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=fc7b1ad4 or
 	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=853, limit=900, resetTimeInSeconds=1527002901, secondsUntilReset=303}, version=4.0.6}
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=858, limit=900, resetTimeInSeconds=1527072215, secondsUntilReset=86}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
@@ -161,7 +98,7 @@ code - 179
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=fc7b1ad4 or
 	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=899, limit=900, resetTimeInSeconds=1527004734, secondsUntilReset=899}, version=4.0.6}
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=899, limit=900, resetTimeInSeconds=1527073137, secondsUntilReset=899}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
@@ -182,7 +119,70 @@ code - 179
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=fc7b1ad4 or
 	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=841, limit=900, resetTimeInSeconds=1527004734, secondsUntilReset=153}, version=4.0.6}
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=887, limit=900, resetTimeInSeconds=1527073137, secondsUntilReset=718}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=893, limit=900, resetTimeInSeconds=1527075915, secondsUntilReset=835}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=879, limit=900, resetTimeInSeconds=1527075915, secondsUntilReset=702}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=893, limit=900, resetTimeInSeconds=1527076821, secondsUntilReset=853}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
@@ -203,7 +203,7 @@ code - 63
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=4c04b56d or
 	http://www.google.co.jp/search?q=e21b3f53
-TwitterException{exceptionCode=[4c04b56d-e21b3f53], statusCode=403, message=User has been suspended., code=63, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=880, limit=900, resetTimeInSeconds=1527005846, secondsUntilReset=780}, version=4.0.6}
+TwitterException{exceptionCode=[4c04b56d-e21b3f53], statusCode=403, message=User has been suspended., code=63, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=865, limit=900, resetTimeInSeconds=1527076371, secondsUntilReset=214}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
@@ -225,7 +225,7 @@ code - 179
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=fc7b1ad4 or
 	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=892, limit=900, resetTimeInSeconds=1527006551, secondsUntilReset=822}, version=4.0.6}
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=837, limit=900, resetTimeInSeconds=1527076821, secondsUntilReset=7}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
@@ -246,7 +246,91 @@ code - 179
 Relevant discussions can be found on the Internet at:
 	http://www.google.co.jp/search?q=fc7b1ad4 or
 	http://www.google.co.jp/search?q=c154b5ad
-TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=862, limit=900, resetTimeInSeconds=1527006551, secondsUntilReset=341}, version=4.0.6}
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=868, limit=900, resetTimeInSeconds=1527077730, secondsUntilReset=408}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=863, limit=900, resetTimeInSeconds=1527077730, secondsUntilReset=314}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=853, limit=900, resetTimeInSeconds=1527077730, secondsUntilReset=211}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=891, limit=900, resetTimeInSeconds=1527078636, secondsUntilReset=766}, version=4.0.6}
+	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
+	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
+	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
+	at twitter4j.TwitterImpl.get(TwitterImpl.java:1786)
+	at twitter4j.TwitterImpl.showStatus(TwitterImpl.java:210)
+	at TwitterToGraph.createEdgesFromTweet(TwitterToGraph.java:171)
+	at TwitterStreaming$1.onStatus(TwitterStreaming.java:101)
+	at twitter4j.HackedStatusStreamImpl.onStatus(HackedStatusStreamImpl.java:53)
+	at twitter4j.StatusStreamBase$1.run(StatusStreamBase.java:105)
+	at twitter4j.HackedDispatcherImpl.invokeLater(HackedDispatcherImpl.java:14)
+	at twitter4j.StatusStreamBase.handleNextElement(StatusStreamBase.java:80)
+	at twitter4j.HackedStatusStreamImpl.next(HackedStatusStreamImpl.java:31)
+	at twitter4j.HackedTwitterStreamImpl$TwitterStreamConsumer.run(HackedTwitterStreamImpl.java:552)
+403:The request is understood, but it has been refused. An accompanying error message will explain why. This code is used when requests are being denied due to update limits (https://support.twitter.com/articles/15364-about-twitter-limits-update-api-dm-and-following).
+message - Sorry, you are not authorized to see this status.
+code - 179
+
+Relevant discussions can be found on the Internet at:
+	http://www.google.co.jp/search?q=fc7b1ad4 or
+	http://www.google.co.jp/search?q=c154b5ad
+TwitterException{exceptionCode=[fc7b1ad4-c154b5ad], statusCode=403, message=Sorry, you are not authorized to see this status., code=179, retryAfter=-1, rateLimitStatus=RateLimitStatusJSONImpl{remaining=872, limit=900, resetTimeInSeconds=1527078636, secondsUntilReset=538}, version=4.0.6}
 	at twitter4j.HttpClientImpl.handleRequest(HttpClientImpl.java:164)
 	at twitter4j.HttpClientBase.request(HttpClientBase.java:57)
 	at twitter4j.HttpClientBase.get(HttpClientBase.java:75)
